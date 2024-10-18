@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de Usuario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/global-css.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1 class="navbar-logo">Prueba Técnica</h1>
+                <ul class="navbar-menu">
+                    <li><a href="registro.html">Registro Usuario</a></li>
+                    <li><a href="admin.html">Administrar Usuarios</a></li>
+                    <li><a href="dashboard.html">Pagina Principal</a></li>
+                    <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h1>Registro de Usuario</h1>
+            <form id="registroForm">
+                <label for="nombreUsuario">Nombre de Usuario:</label><br>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required><br><br>
+
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+                <label for="nombreCompleto">Nombre Completo:</label><br>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required><br><br>
+
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+                <label for="sexo">Sexo:</label><br>
+                <select id="sexo" name="sexo">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select><br><br>
+
+                <label for="edad">edad</label><br>
+                <input type="number" id="edad" name="edad" step="0.01" required><br><br>
+
+                <label for="pesoActual">Peso Actual (kg):</label><br>
+                <input type="number" id="pesoActual" name="pesoActual" step="0.01" required><br><br>
+
+                <label for="altura">Altura (cm):</label><br>
+                <input type="number" id="altura" name="altura" step="0.01" required><br><br>
+
+                <label for="imei">IMEI del Dispositivo:(No llenar)</label><br>
+                <input type="text" id="imei" name="imei" readonly=""><br><br>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+
+        <div id="mensajeError" style="color: red;"></div>
+
+        <script src="../JavaScript/app.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.getElementById('registroForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                registrarUsuario();
+            });
+        </script>
+    </body>
+</html>

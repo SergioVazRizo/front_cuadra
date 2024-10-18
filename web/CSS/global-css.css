@@ -1,0 +1,236 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EEF7FF;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Barra de navegación */
+header {
+    width: 100%;
+    background-color: #4D869C;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    color: #EEF7FF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #EEF7FF;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #7AB2B2;
+}
+
+/* Contenido principal */
+h1 {
+    color: #4D869C;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4D869C;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#informacionSalud {
+    text-align: left;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    border: 1px solid #7AB2B2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablas*/
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #7AB2B2;
+}
+
+th {
+    background-color: #4D869C;
+    color: #EEF7FF;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #E0F2F7; /* Color de fondo al pasar el mouse */
+}
+
+tr:nth-child(even) {
+    background-color: #F7FAFC; /* Color de fondo para filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Color de fondo para filas impares */
+}
+
+.caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4D869C;
+}
+
+/* Formularios*/
+/* Estilos para formularios */
+form {
+    background-color: #FFFFFF;
+    border: 1px solid #7AB2B2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario */
+}
+
+/* Estilos para etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4D869C;
+}
+
+/* Estilos para campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7AB2B2;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* Estilo para campo de entrada al enfocar */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #4D869C;
+    outline: none; /* Eliminar el contorno predeterminado */
+}
+
+/* Estilos para botones */
+button {
+    background-color: #4D869C;
+    color: #EEF7FF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #7AB2B2;
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    form {
+        padding: 15px; /* Relleno menor en pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .navbar-menu a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: #EEF7FF;
+        border-top: 1px solid #7AB2B2;
+    }
+
+    .navbar-menu a:hover {
+        color: #4D869C;
+        background-color: #EEF7FF;
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+}

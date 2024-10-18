@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="../CSS/global-css.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <header>
+        <nav class="navbar">
+            <h1 class="navbar-logo">Prueba Técnica</h1>
+            <ul class="navbar-menu">
+                <li><a href="registro.html">Registro Usuario</a></li>
+                <li><a href="admin.html">Administrar Usuarios</a></li>
+                <li><a href="dashboard.html">Pagina Principal</a></li>
+                <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <h1>Bienvenido</h1>
+
+            <h2>Información de Salud:</h2>
+            <div id="informacionSalud">
+                <h2>Estado del Peso:</h2>
+                <p id="estadoPeso" style="font-weight: bold;"></p>
+                <p>IMC: <span id="imcValor"></span></p>
+                <p>Peso Ideal: <span id="pesoIdealValor"></span> kg</p>
+                <p>Presión Arterial Ideal: <span id="presionArterialIdealValor"></span></p>
+            </div>
+        </div>
+
+        <script src="../JavaScript/app.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+                    // Obtener el token del localStorage (se guarda después del login exitoso)
+                    const token = localStorage.getItem('token');
+
+                    if (!token) {
+                        // Si no hay token, redirige al login
+                        window.location.href = "index.html";
+                    } else {
+                        obtenerInformacionSalud(token);
+                    }
+        </script>
+    </body>
+</html>
