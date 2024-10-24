@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8081/api/usuarios";
+const API_BASE_URL = "http://18.221.212.203:8081/api/usuarios";
 
 // Función para manejar las respuestas del backend
 async function handleResponse(response) {
